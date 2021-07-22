@@ -1,0 +1,119 @@
+@import "config";
+// These are the variables used for the whole styles.
+$primary: #c7d5e6;
+$secondary: #e6d8c7;
+$tertiaryColor: #171717;
+$fourthColour: #fdfbf9;
+
+.about-content {
+  background-color: #171717;
+  padding: 2rem; // end of general styles.
+
+  display: flex; // Display property.
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; // end of display property styles.
+
+  // Div that contains the actual image
+  .image {
+    img {
+      max-width: 20rem;
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px $fourthColour;
+    }
+  }
+  /**
+    Contents of the about. */
+  .about-content_info {
+    * {
+      // set all the elements of the all elements under the about-content-info class.
+      color: $fourthColour;
+    }
+
+    // Section that contains the title "About" and the horizontal line styles.
+    .title-section {
+      @include horizontalLineStyle();
+      @include titleSection();
+      // "About"
+      h1 {
+        @include title();
+      }
+    }
+    // About Paragraph.
+    p {
+      color: $fourthColour;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .image {
+      align-self: flex-start;
+      width: 50%;
+      margin-right: 0.5rem;
+      text-align: center;
+    }
+
+    .about-content_info {
+      align-self: baseline;
+      width: 50%;
+      .title-section {
+        align-items: flex-start;
+      }
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about-content {
+    .image {
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about {
+    background: $tertiaryColor;
+    padding: 4rem;
+  }
+  .about-content {
+    .image {
+      align-self: center;
+      max-width: 50%;
+      width: 20rem;
+      margin: 0 3rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .about-content_info {
+      .title-section {
+        h1 {
+          font-size: 3rem;
+        }
+        .horizontal-style {
+          width: 15rem;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.message-me-section {
+  background: #171717;
+  padding: 2rem;
+}
+
+.message-me-section * {
+  color: #fdfbf9;
+}
+
+.message-me-section .message-me-section-content .title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.message-me-section .message-me-section-content .title-section h1 {
+  color: #e6d8c7;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.message-me-section .message-me-section-content .title-section .horizontal-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #e6d8c7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 50%;
+  width: 10rem;
+}
+
+.message-me-section .message-me-section-content .title-section .horizontal-style hr {
+  width: 50%;
+}
+
+.message-me-section .message-me-section-content #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.message-me-section .message-me-section-content #form * {
+  width: 100%;
+}
+
+.message-me-section .message-me-section-content #form label {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.message-me-section .message-me-section-content #form #full-name,
+.message-me-section .message-me-section-content #form #e-mail,
+.message-me-section .message-me-section-content #form #message {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #171717;
+  border: none;
+  outline: none;
+  background: #313131;
+  color: white;
+  -webkit-transition: border 3000ms linear;
+  transition: border 3000ms linear;
+}
+
+.message-me-section .message-me-section-content #form #full-name:focus,
+.message-me-section .message-me-section-content #form #e-mail:focus,
+.message-me-section .message-me-section-content #form #message:focus {
+  border: 1px solid #e6d8c7;
+  border-width: 1px;
+}
+
+.message-me-section .message-me-section-content #form button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 10rem;
+  border: 1px solid #fdfbf9;
+  background: #171717;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  color: #fdfbf9;
+  margin-top: 1rem;
+}
+
+.message-me-section .message-me-section-content #form button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px #fdfbf9;
+          box-shadow: 0px 0px 5px #fdfbf9;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+@media only screen and (min-width: 576px), (min-width: 768px), (min-width: 992px) {
+  .message-me-section .message-me-section-content #form {
+    width: 60vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .message-me-section .message-me-section-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .message-me-section .message-me-section-content .title-section {
+    margin: 0 0.5rem;
+    width: 50%;
+  }
+  .message-me-section .message-me-section-content .title-section h1 {
+    font-size: 3rem;
+  }
+  .message-me-section .message-me-section-content #form {
+    max-width: 50rem;
+  }
+  .message-me-section .message-me-section-content #form #full-name,
+  .message-me-section .message-me-section-content #form #e-mail,
+  .message-me-section .message-me-section-content #form #message {
+    font-size: 1.3rem;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
