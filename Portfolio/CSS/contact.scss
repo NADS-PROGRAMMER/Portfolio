@@ -8,6 +8,7 @@
   }
 
   .message-me-section-content {
+    // Here is the title section
     .title-section {
       @include displayFlex();
       h1 {
@@ -16,45 +17,53 @@
       @include horizontalLineStyle();
     }
 
-    #form {
+    .form-section {
+      margin-top: 3rem;
       @include displayFlex();
-      align-items: flex-start; // just override the align-items property to the mixin.
-      * {
-        width: 100%;
+      align-items: stretch;
+      h1 {
+        text-align: center;
       }
+      #form {
+        @include displayFlex();
+        align-items: flex-start; // just override the align-items property to the mixin.
+        * {
+          width: 100%;
+        }
 
-      label {
-        margin-top: 1rem;
-        font-size: 1.2rem;
-      }
+        label {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
 
-      // general style for the three inputs.
-      #full-name,
-      #e-mail,
-      #message {
-        padding: 0.5rem;
-        font-size: 1rem;
-        color: $tertiaryColor;
-        border: none;
-        outline: none;
-        background: $fifthColor;
-        color: white;
-        transition: border 3000ms linear;
-      }
+        // general style for the three inputs.
+        #full-name,
+        #e-mail,
+        #message {
+          padding: 0.5rem;
+          font-size: 1rem;
+          color: $tertiaryColor;
+          border: none;
+          outline: none;
+          background: $fifthColor;
+          color: white;
+          transition: border 3000ms linear;
+        }
 
-      #full-name:focus,
-      #e-mail:focus,
-      #message:focus {
-        border: 1px solid $secondary;
-        border-width: 1px;
-      }
-      // Styles for button including the style when hovering it.
-      button {
-        @include buttonStyle();
-        margin-top: 1rem;
-      }
-      button:hover {
-        @include buttonHoverStyle();
+        #full-name:focus,
+        #e-mail:focus,
+        #message:focus {
+          border: 1px solid $secondary;
+          border-width: 1px;
+        }
+        // Styles for button including the style when hovering it.
+        button {
+          @include buttonStyle();
+          margin-top: 1rem;
+        }
+        button:hover {
+          @include buttonHoverStyle();
+        }
       }
     }
   }
@@ -65,7 +74,7 @@
   (min-width: 992px) {
   .message-me-section {
     .message-me-section-content {
-      #form {
+      .form-section {
         width: 60vw;
         margin: 0 auto;
       }
@@ -89,13 +98,20 @@
         }
       }
 
-      #form {
+      .form-section {
         max-width: 50rem;
 
-        #full-name,
-        #e-mail,
-        #message {
-          font-size: 1.3rem;
+        h1 {
+          font-size: 3rem;
+        }
+        #form {
+          max-width: 50rem;
+
+          #full-name,
+          #e-mail,
+          #message {
+            font-size: 1.3rem;
+          }
         }
       }
     }
