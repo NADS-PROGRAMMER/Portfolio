@@ -1,0 +1,194 @@
+.main_services {
+  background: #313131;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_services .title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.main_services .title-section .title {
+  color: #e6d8c7;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main_services .title-section .horizontal-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #e6d8c7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 50%;
+  width: 10rem;
+}
+
+.main_services .title-section .horizontal-style hr {
+  width: 50%;
+}
+
+.main_services .dots {
+  margin-top: 1rem;
+}
+
+.main_services .dots span {
+  display: inline-block;
+  background: #fdfbf9;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+
+.main_services .dots span:hover {
+  cursor: pointer;
+  background-color: #e6d8c7;
+}
+
+.main_services .services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  max-width: 90vw;
+}
+
+.main_services .services .image {
+  grid-column: 1/-1;
+}
+
+.main_services .services .image img {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 5px 1px #fdfbf9;
+          box-shadow: 0px 0px 5px 1px #fdfbf9;
+}
+
+@-webkit-keyframes animate {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.main_services .services .content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.main_services .services .content * {
+  color: #fdfbf9;
+}
+
+.main_services .services .content h1 {
+  font-size: 1.5rem;
+}
+
+.main_services .services .content button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 10rem;
+  border: 1px solid #fdfbf9;
+  background: #171717;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  color: #fdfbf9;
+}
+
+.main_services .services .content button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px #fdfbf9;
+          box-shadow: 0px 0px 5px #fdfbf9;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+@media only screen and (min-width: 576px) {
+  .main_services .services {
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 768px), (min-width: 992px) {
+  .main_services .services {
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main_services .title-section .title {
+    font-size: 3rem;
+  }
+  .main_services .services {
+    max-width: 60vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .main_services .services .image {
+    width: 50%;
+  }
+  .main_services .services .content {
+    width: 50%;
+    padding: 1rem;
+  }
+  .main_services .services .content h1 {
+    font-size: 2rem;
+  }
+  .main_services .services .content button {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=services.css.map */
