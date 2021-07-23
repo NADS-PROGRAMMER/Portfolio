@@ -110,15 +110,14 @@
   outline: none;
   background: #313131;
   color: white;
-  -webkit-transition: border 3000ms linear;
-  transition: border 3000ms linear;
+  -webkit-transition: outline 3000ms;
+  transition: outline 3000ms;
 }
 
 .message-me-section .message-me-section-content .form-section #form #full-name:focus,
 .message-me-section .message-me-section-content .form-section #form #e-mail:focus,
 .message-me-section .message-me-section-content .form-section #form #message:focus {
-  border: 1px solid #e6d8c7;
-  border-width: 1px;
+  outline: 1px solid #e6d8c7;
 }
 
 .message-me-section .message-me-section-content .form-section #form button {
@@ -162,7 +161,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 auto;
   }
   .message-me-section .message-me-section-content .title-section {
     margin: 0 0.5rem;
@@ -172,13 +170,16 @@
     font-size: 3rem;
   }
   .message-me-section .message-me-section-content .form-section {
-    max-width: 50rem;
+    width: 35vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .message-me-section .message-me-section-content .form-section h1 {
-    font-size: 3rem;
-  }
-  .message-me-section .message-me-section-content .form-section #form {
-    max-width: 50rem;
+    font-size: 2rem;
+    text-align: left;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .message-me-section .message-me-section-content .form-section #form #full-name,
   .message-me-section .message-me-section-content .form-section #form #e-mail,
