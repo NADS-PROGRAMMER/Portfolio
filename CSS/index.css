@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins;
+  color: #171717;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+header {
+  display: none;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  background-image: url("/Final Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container-1 {
+  /**
+  general styles
+  */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  padding: 2rem;
+}
+
+.container-1 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-1 .navbar ul {
+  list-style-type: none;
+}
+
+.container-1 .navbar ul li {
+  width: 2.5rem;
+}
+
+.container-1 .navbar ul li hr {
+  height: 5px;
+  background: black;
+}
+
+.container-1 .section-title h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.container-1 .section-title p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container-1 .section-title hr {
+  background-color: #171717;
+  width: 5rem;
+  height: 5px;
+}
+
+.container-1 .section-title button {
+  background-color: #e6d8c7;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.container-1 .section-title button:hover {
+  cursor: pointer;
+  background: #dbcdbc;
+}
+
+.container-1 .basic-info section .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.container-1 .basic-info section .infos img {
+  height: 1.5rem;
+}
+
+.container-1 .basic-info section .infos * {
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.container-1 * {
+  margin: 0.4rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .container-1 .container-1-content {
+    padding: 3rem;
+  }
+  .container-1 .container-1-content .section-title h1 {
+    font-size: 1.2rem;
+  }
+  .container-1 .container-1-content .section-title p {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 2rem;
+  }
+  header ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header ul li {
+    margin: 0 4rem;
+  }
+  header ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  header ul li a:hover {
+    border-bottom: 1px solid black;
+  }
+  .main {
+    /** We set the bg attachment to fixed to
+    have a parallax effect. */
+    background-attachment: fixed;
+    min-height: 70vh;
+    height: 100vh;
+  }
+  .container-1 {
+    height: 70vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-1 .navbar {
+    display: none;
+  }
+  .container-1 .container-1-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .container-1 .container-1-content .section-title {
+    width: 50%;
+  }
+  .container-1 .container-1-content .section-title h1 {
+    font-size: 1.5rem;
+  }
+  .container-1 .container-1-content .section-title p {
+    font-size: 3rem;
+  }
+  .container-1 .container-1-content .basic-info section .infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 1.1rem;
+  }
+  .container-1 .container-1-content .basic-info section .infos * {
+    margin: 0.5rem 1rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */
