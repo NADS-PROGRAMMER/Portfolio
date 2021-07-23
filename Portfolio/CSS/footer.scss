@@ -50,11 +50,10 @@ footer {
 }
 
 /** MEDIA QUERIES */
-
 @media only screen and (min-width: 576px) {
   footer {
     nav {
-      * {
+      .about-site-section {
         text-align: center;
       }
       display: flex;
@@ -82,7 +81,7 @@ footer {
   footer {
     nav {
       width: 40%;
-      padding: 2rem;
+      padding: 1.2rem;
       margin: 0 auto;
 
       .about-site-section {

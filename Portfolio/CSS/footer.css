@@ -84,7 +84,7 @@ footer nav .copyright-section {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  footer nav * {
+  footer nav .about-site-section {
     text-align: center;
   }
   footer nav .copyright-section {
@@ -104,7 +104,7 @@ footer nav .copyright-section {
 @media only screen and (min-width: 1200px) {
   footer nav {
     width: 40%;
-    padding: 2rem;
+    padding: 1.2rem;
     margin: 0 auto;
   }
   footer nav .about-site-section {
