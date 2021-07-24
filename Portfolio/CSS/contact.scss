@@ -79,11 +79,33 @@
 
           ); /* SEE IMPLEMENTATION ON _config.scss file. */
         }
+        .modal {
+          display: none;
+          background: rgb(86, 141, 86);
+          padding: 1rem;
+          width: 100%;
+          margin: 0.6rem 0;
+          text-align: center;
+          outline: 1px solid white;
+          p {
+            font-size: 1.2rem;
+          }
+        }
       }
     }
   }
 }
 
+@keyframes modalAnimation {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: block;
+    height: 100%;
+  }
+}
 // MEDIA QUERIES.
 @media only screen and (min-width: 576px),
   (min-width: 768px),

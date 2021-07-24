@@ -172,6 +172,42 @@
   /* SEE IMPLEMENTATION ON _config.scss file. */
 }
 
+.message-me-section .message-me-section-content .form-section #form .modal {
+  display: none;
+  background: #568d56;
+  padding: 1rem;
+  width: 100%;
+  margin: 0.6rem 0;
+  text-align: center;
+  outline: 1px solid white;
+}
+
+.message-me-section .message-me-section-content .form-section #form .modal p {
+  font-size: 1.2rem;
+}
+
+@-webkit-keyframes modalAnimation {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: block;
+    height: 100%;
+  }
+}
+
+@keyframes modalAnimation {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: block;
+    height: 100%;
+  }
+}
+
 @media only screen and (min-width: 576px), (min-width: 768px), (min-width: 992px) {
   .message-me-section .message-me-section-content .form-section {
     width: 60vw;
