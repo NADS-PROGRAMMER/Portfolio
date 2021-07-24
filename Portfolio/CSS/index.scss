@@ -1,7 +1,4 @@
-$primary: #c7d5e6;
-$secondary: #e6d8c7;
-$tertiaryColor: #171717;
-$fourthColour: #fdfbf9;
+@import "config";
 
 * {
   margin: 0;
@@ -15,6 +12,7 @@ html {
   overflow-x: hidden;
   font-size: 14px;
 }
+
 // By default, the header for desktop sizes is hidden.
 header {
   display: none;
@@ -30,6 +28,7 @@ header {
 }
 
 .main::before {
+  background-color: rgba($color: #fff, $alpha: 0.5);
   content: "";
   position: absolute;
   z-index: -1;
@@ -38,9 +37,15 @@ header {
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba($color: #fff, $alpha: 0.5);
 }
 
+/***
+
+  A container that contains the navbar for mobile device,
+  title section, and the basic info such as the location, bachelor's
+  degree etc.
+
+****/
 .container-1 {
   /**
   general styles
@@ -84,25 +89,18 @@ header {
       width: 5rem;
       height: 5px;
     }
-    // button
+    // buttons and the style for hover
     button {
-      background-color: $secondary;
-      border: 1px solid black;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+      @include buttonStyle();
     }
     button:hover {
-      cursor: pointer;
-      background: #dbcdbc;
-    }
+      @include buttonHoverStyle();
+    } // end of button styles
   } // end of title section
 
   .basic-info {
     section {
       .infos {
-        // width: max-content;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -142,9 +140,7 @@ header {
   }
 }
 
-@media screen and (min-width: 992px) {
-}
-// Media queries for DESKTOP SCREEN SIZES
+// Media queries for DESKTOP SCREEN SIZES.
 @media only screen and (min-width: 1200px) {
   header {
     display: block;
@@ -152,11 +148,15 @@ header {
     justify-content: space-around;
     padding: 2rem;
     ul {
-      list-style: none;
+      list-style: none; // remove the bullet points.
+
+      // Display properties.
       display: flex;
       align-items: center;
       li {
-        margin: 0 4rem;
+        margin: 0 4rem; // set the margin of left and right to 4 * 16px.
+
+        // anchor tags styles.
         a {
           text-decoration: none;
           color: black;
@@ -164,6 +164,7 @@ header {
         a:hover {
           border-bottom: 1px solid black;
         }
+        // end of a tags styles.
       }
     }
   } // end of styles for header
@@ -189,6 +190,7 @@ header {
 
     // div that contains the section title and infos
     .container-1-content {
+      // Display properties.
       display: flex;
       justify-content: space-evenly;
       .section-title {
@@ -220,4 +222,4 @@ header {
       }
     }
   } // end of container 1
-}
+} // END OF MEDIA QUERIES FOR 1200px minimum width devices.

@@ -1,5 +1,10 @@
 @import "config";
 
+/**
+  THESE ARE ALL THE STYLES OF THE PROJECTS SECTION.
+**/
+
+// MIXINS THAT EXCLUSIVELY ON THE PROJECTS SECTION.
 @mixin displayFlexForProject() {
   display: flex;
   flex-direction: column;
@@ -7,26 +12,32 @@
   justify-content: center;
 }
 
+// This is the MAIN Division for the Projects.
 .projects {
   background: $fifthColor;
   padding: 2rem;
 
   // Title section
   .title-section {
-    @include titleSection();
+    @include titleSection(); /* SEE THE IMPLEMENTATION IN _config.scss file */
     h1 {
-      @include title();
+      @include title(); /* SEE THE IMPLEMENTATION IN _config.scss file */
     }
-    @include horizontalLineStyle();
+    @include horizontalLineStyle(
+
+    ); /* SEE THE IMPLEMENTATION IN _config.scss file */
   }
 
-  // Project content.
+  /**
+    This is the division that contains the actual project that 
+    contains the div that contains the image, name of project, description and a button.
+  **/
   .project-content {
     @include displayFlex();
 
     .project {
       margin: 1rem;
-      @include displayFlexForProject();
+      @include displayFlexForProject(); /* SEE THE IMPLEMENTATION ABOVE */
       img {
         width: 100%;
       }
@@ -39,27 +50,33 @@
         color: $fourthColour;
       }
       button {
-        @include buttonStyle();
+        @include buttonStyle(
+
+        ); /* SEE THE IMPLEMENTATION IN _config.scss file */
       }
       button:hover {
-        @include buttonHoverStyle();
+        @include buttonHoverStyle(
+
+        ); /* SEE THE IMPLEMENTATION IN _config.scss file */
       }
     }
   }
 }
+
+// MEDIA QUERIES.
 
 @media only screen and (min-width: 576px) {
   .projects {
     @include displayFlex();
   }
   .project-content {
-    width: 60vw !important;
+    width: 60vw !important; // SET IMPORTANT TO OVERRIDE THE DEFAULT STYLE OF .project-content when the min-width is satisfied
   }
 }
 
 @media only screen and (min-width: 992px) {
   .project-content {
-    width: 50vw !important;
+    width: 50vw !important; // SET IMPORTANT TO OVERRIDE THE DEFAULT STYLE OF .project-content when the min-width is satisfied
   }
 }
 
@@ -71,7 +88,7 @@
       }
     }
     .project-content {
-      width: 90vw !important;
+      width: 90vw !important; // SET IMPORTANT TO OVERRIDE THE DEFAULT STYLE OF .project-content when the min-width is satisfied
       display: grid;
       column-gap: 1rem;
       grid-template-columns: repeat(3, 1fr);

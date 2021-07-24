@@ -1,3 +1,22 @@
+/**
+  Since there are many title sections across the page,
+  we stick to the same general style and only override this
+  if necessary.
+**/
+/**
+  Since titles in webpage also the same, we also 
+  set the same general style for the whole page.
+**/
+/**
+  This is also the same style applied to all
+  horizontal sections and its corresponding horizontal lines.
+**/
+/**
+  Styles of all the buttons across the page.
+**/
+/**
+  Styles for the button when hovered.
+**/
 .about-content {
   background-color: #171717;
   padding: 2rem;

@@ -1,3 +1,22 @@
+/**
+  Since there are many title sections across the page,
+  we stick to the same general style and only override this
+  if necessary.
+**/
+/**
+  Since titles in webpage also the same, we also 
+  set the same general style for the whole page.
+**/
+/**
+  This is also the same style applied to all
+  horizontal sections and its corresponding horizontal lines.
+**/
+/**
+  Styles of all the buttons across the page.
+**/
+/**
+  Styles for the button when hovered.
+**/
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +45,7 @@ header {
 }
 
 .main::before {
+  background-color: rgba(255, 255, 255, 0.5);
   content: "";
   position: absolute;
   z-index: -1;
@@ -34,9 +54,15 @@ header {
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
+/***
+
+  A container that contains the navbar for mobile device,
+  title section, and the basic info such as the location, bachelor's
+  degree etc.
+
+****/
 .container-1 {
   /**
   general styles
@@ -94,17 +120,25 @@ header {
 }
 
 .container-1 .section-title button {
-  background-color: #e6d8c7;
-  border: 1px solid black;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-top: 0.5rem;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  width: 10rem;
+  border: 1px solid #fdfbf9;
+  background: #171717;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  color: #fdfbf9;
 }
 
 .container-1 .section-title button:hover {
   cursor: pointer;
-  background: #dbcdbc;
+  -webkit-box-shadow: 0px 0px 5px #fdfbf9;
+          box-shadow: 0px 0px 5px #fdfbf9;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .container-1 .basic-info section .infos {

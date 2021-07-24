@@ -3,6 +3,8 @@
 footer {
   @include displayFlex();
   padding: 2rem;
+
+  // General font color of all the elements in footer.
   * {
     color: $fourthColour;
   }
@@ -34,6 +36,7 @@ footer {
       }
     }
 
+    // Section of short description on the footer.
     .about-site-section {
       width: 60%;
     }

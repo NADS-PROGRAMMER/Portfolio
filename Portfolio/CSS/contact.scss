@@ -1,32 +1,44 @@
 @import "config";
 
+/**
+  #THESE ARE ALL THE STYLES FOR THE MESSAGE ME SECTION.
+**/
 .message-me-section {
+  // General styles.
   background: $tertiaryColor;
   padding: 2rem;
+
+  // General styles for all the elements under this section.
   * {
     color: $fourthColour;
   }
 
+  // #This is the actual content of the message-section.
   .message-me-section-content {
     // Here is the title section
     .title-section {
-      @include displayFlex();
+      @include displayFlex(); /* SEE IMPLEMENTATION ON _config.scss file. */
       h1 {
-        @include title();
+        @include title(); /* SEE IMPLEMENTATION ON _config.scss file. */
       }
-      @include horizontalLineStyle();
+      @include horizontalLineStyle(
+
+      ); /* SEE IMPLEMENTATION ON _config.scss file. */
     }
 
+    // #FORM SECTION.
     .form-section {
+      // This is the form section general style.
+      @include displayFlex(); /* SEE IMPLEMENTATION ON _config.scss file. */
       margin-top: 3rem;
-      @include displayFlex();
       align-items: stretch;
       h1 {
         text-align: center;
       }
       #form {
-        @include displayFlex();
+        @include displayFlex(); /* SEE IMPLEMENTATION ON _config.scss file. */
         align-items: flex-start; // just override the align-items property to the mixin.
+
         * {
           width: 100%;
         }
@@ -50,6 +62,7 @@
           transition: outline 3000ms;
         }
 
+        // Style of the three inputs when get hovered.
         #full-name:focus,
         #e-mail:focus,
         #message:focus {
@@ -58,17 +71,20 @@
         }
         // Styles for button including the style when hovering it.
         button {
-          @include buttonStyle();
+          @include buttonStyle(); /* SEE IMPLEMENTATION ON _config.scss file. */
           margin-top: 1rem;
         }
         button:hover {
-          @include buttonHoverStyle();
+          @include buttonHoverStyle(
+
+          ); /* SEE IMPLEMENTATION ON _config.scss file. */
         }
       }
     }
   }
 }
 
+// MEDIA QUERIES.
 @media only screen and (min-width: 576px),
   (min-width: 768px),
   (min-width: 992px) {

@@ -2,6 +2,7 @@
 
 // Here are the variables.
 
+// HERE IS THE MAIN DIVISION OF THE SERVICES SECTION OF THE WEBPAGE.
 .main_services {
   background: $fifthColor;
   padding: 2rem;
@@ -18,21 +19,14 @@
     @include horizontalLineStyle();
   }
 
-  // // style for the horizontal line.
-  // .horizontal-line {
-  //   color: $secondary;
-  //   margin-bottom: 0.5rem;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 10rem;
-  //   hr {
-  //     width: 50%;
-  //   }
-  // }
-
+  // Division of the dots navigation.
   .dots {
     margin-top: 1rem;
+
+    /**
+      Here is the actual dot and set its border-radius to 50% to
+      make it fully rounded circle.
+    **/
     span {
       display: inline-block;
       background: $fourthColour;
@@ -46,12 +40,14 @@
       background-color: $secondary;
     }
   }
-  // services
+
+  // Division of services that contains the image, name of the service, and the button.
   .services {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     max-width: 90vw;
-    // image section
+
+    // Image section.
     .image {
       grid-column: 1/-1;
       img {
@@ -67,7 +63,8 @@
         }
       }
     }
-    // content section
+
+    // Content section.
     .content {
       grid-column: 1/4;
       * {
@@ -87,6 +84,7 @@
   }
 }
 
+// MEDIA QUERIES.
 @media only screen and (min-width: 576px) {
   .main_services {
     .services {
