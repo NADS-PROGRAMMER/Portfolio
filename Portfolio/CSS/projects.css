@@ -124,6 +124,7 @@
 }
 
 .projects .project-content .project button {
+  /* SEE THE IMPLEMENTATION IN _config.scss file */
   margin-top: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
@@ -135,16 +136,15 @@
   transition: transform 300ms ease-in;
   transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
   color: #fdfbf9;
-  /* SEE THE IMPLEMENTATION IN _config.scss file */
 }
 
 .projects .project-content .project button:hover {
+  /* SEE THE IMPLEMENTATION IN _config.scss file */
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 5px #fdfbf9;
           box-shadow: 0px 0px 5px #fdfbf9;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  /* SEE THE IMPLEMENTATION IN _config.scss file */
 }
 
 @media only screen and (min-width: 576px) {
@@ -184,6 +184,9 @@
     display: grid;
     -webkit-column-gap: 1rem;
             column-gap: 1rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }

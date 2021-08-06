@@ -50,11 +50,11 @@ $fifthColor: #313131;
 }
 
 // Flex properties.
-@mixin displayFlex() {
+@mixin displayFlex($direction, $al-items, $just-content) {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: $direction;
+  align-items: $al-items;
+  justify-content: $just-content;
 }
 
 /**

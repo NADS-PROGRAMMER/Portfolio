@@ -1,7 +1,7 @@
 @import "config";
 
 footer {
-  @include displayFlex();
+  @include displayFlex(column, none, none);
   padding: 2rem;
 
   // General font color of all the elements in footer.
@@ -12,16 +12,13 @@ footer {
   // Navigation
   nav {
     // Section that contains the logo.
-    .logo-section {
-      img {
-        width: 8rem;
-      }
+    .logo-section img {
+      width: 8rem;
     }
 
     // Section of social media icons
     .social-media-section {
-      display: flex;
-      justify-content: flex-start;
+      @include displayFlex(row, none, flex-start);
       margin-top: 1rem;
       img {
         display: block;
@@ -56,14 +53,10 @@ footer {
 @media only screen and (min-width: 576px) {
   footer {
     nav {
+      @include displayFlex(column, center, center);
       .about-site-section {
         text-align: center;
       }
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
       .copyright-section {
         align-items: center;
       }
@@ -72,28 +65,30 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
-  footer {
-    nav {
-      width: 70%;
-      margin: 0 auto;
-    }
+  footer nav {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  footer {
-    nav {
-      width: 40%;
-      padding: 1.2rem;
-      margin: 0 auto;
+  footer nav {
+    width: 50%;
+    padding: 1.2rem;
+    margin: 0 auto;
 
-      .about-site-section {
-        width: 70%;
-      }
-
-      .copyright-section {
-        align-items: center;
-      }
+    .about-site-section {
+      width: 70%;
     }
+
+    .copyright-section {
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  footer nav {
+    width: 40%;
   }
 }

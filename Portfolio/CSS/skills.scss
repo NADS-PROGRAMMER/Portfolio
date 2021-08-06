@@ -10,11 +10,7 @@
   padding: 2rem;
 
   // DISPLAY properties.
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // end of display property.
+  @include displayFlex(column, center, center);
 
   // title section
   .title-section {
@@ -32,14 +28,12 @@
     grid-template-columns: repeat(2, 1fr);
     // width: 50vh;
     .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include displayFlex(column, center, center);
       margin: 1rem 1rem;
       img {
         width: 3.5rem;
       }
+      // By default, when it is not get hovered, the name of the logo is hidden. (See the implementation of service.js).
       p {
         visibility: hidden;
         color: $secondary;
@@ -61,19 +55,15 @@
 
 // MEDIA QUERIES.
 @media only screen and (min-width: 768px) {
-  .skills {
-    .skills-content {
-      grid-template-columns: repeat(6, 1fr);
-    }
+  .skills .skills-content {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
   .skills {
     padding: 4rem;
-    .title-section {
-      h1 {
-        font-size: 3rem;
-      }
+    .title-section h1 {
+      font-size: 3rem;
     }
   }
 }

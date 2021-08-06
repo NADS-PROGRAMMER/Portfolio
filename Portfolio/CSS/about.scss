@@ -1,28 +1,18 @@
 @import "config";
-// These are the variables used for the whole styles.
-$primary: #c7d5e6;
-$secondary: #e6d8c7;
-$tertiaryColor: #171717;
-$fourthColour: #fdfbf9;
 
 // It is the div that contains the title, paragraph, and image.
 .about-content {
-  background-color: #171717;
+  background-color: $tertiaryColor;
   padding: 2rem; // end of general styles.
 
-  display: flex; // Display property.
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; // end of display property styles.
+  @include displayFlex(column, center, center);
 
-  // Div that contains the actual image
-  .image {
-    img {
-      max-width: 20rem;
-      width: 100%;
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px $fourthColour;
-    }
+  // <section> that contains the actual image
+  .image img {
+    max-width: 20rem;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px $fourthColour;
   }
   /**
     Contents of the about. */
@@ -54,9 +44,7 @@ $fourthColour: #fdfbf9;
 
 @media only screen and (min-width: 768px) {
   .about-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include displayFlex(row, center, center);
     .image {
       align-self: flex-start;
       width: 50%;

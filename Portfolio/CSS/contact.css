@@ -81,17 +81,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* SEE IMPLEMENTATION ON _config.scss file. */
-  margin-top: 3rem;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  margin-top: 3rem;
 }
 
 .message-me-section .message-me-section-content .form-section h1 {
@@ -106,16 +102,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* SEE IMPLEMENTATION ON _config.scss file. */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  /* SEE IMPLEMENTATION ON _config.scss file. */
+  align-items: flex-start;
 }
 
 .message-me-section .message-me-section-content .form-section #form * {
@@ -220,6 +214,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
