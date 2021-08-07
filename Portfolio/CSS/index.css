@@ -26,6 +26,10 @@
   color: #171717;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 html {
   overflow-x: hidden;
   font-size: 14px;
