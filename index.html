@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="Portfolio/Javascript/services.js"></script>
     <script src="Portfolio/Javascript/skills.js"></script>
     <script src="/Portfolio/Javascript/form.js"></script>
+    <script src="/Portfolio/Javascript/animation.js"></script>
     <link rel="stylesheet" href="Portfolio/CSS/index.css">
     <link rel="stylesheet" href="Portfolio/CSS/about.css">
     <link rel="stylesheet" href="Portfolio/CSS/services.css">
@@ -183,18 +185,18 @@
             
             <section class="project project-1">
                 
-                <img src="Portfolio/Projects/We Love The Earth.png" alt="">
-                <section>
+                <img id="project-1-image" src="Portfolio/Projects/We Love The Earth.png" alt="">
+                <section id="project-1-section">
                     <h3>We Love The Earth</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sint consequuntur aspernatur nulla. Praesentium placeat a quidem. Harum, odio nesciunt?</p>
-                    <button>See Source Code</button>
+                    <button id="project-1-button">See Source Code</button>
                 </section>
             </section>
 
             <section class="project project-2">
                 
-                <img src="Portfolio/Javascript/Services Image/Product Management System.png" alt="">
-                <section>
+                <img id="project-2-image" src="Portfolio/Javascript/Services Image/Product Management System.png" alt="">
+                <section id="project-2-section">
                     <h3>Product Management System</h3>
                     <p>This project is made for our store. I used Java Swing to it that connects to the database. The functionalities of this program is can put product categories and product itself. It is a simple C.R.U.D application that can help the store owner to track information on all of the products.</p>
                     <button>See Source Code</button>
@@ -203,8 +205,8 @@
 
             <section class="project project-3">
             
-                <img src="Portfolio/Projects/Personal Website.png" alt="">
-                <section>
+                <img id="project-3-image" src="Portfolio/Projects/Personal Website.png" alt="">
+                <section id="project-3-section">
                     <h3>Personal Website</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis.</p>
                     <button>See Source Code</button>
@@ -268,7 +270,6 @@
         </nav>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="/Portfolio/Javascript/animation.js"></script>
+    
 </body>
 </html>

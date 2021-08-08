@@ -20,6 +20,12 @@
 /**
   THESE ARE ALL THE STYLES OF THE PROJECTS SECTION.
 **/
+#project-1-image,
+#project-2-image,
+#project-3-image {
+  opacity: 0;
+}
+
 .projects {
   background: #313131;
   padding: 2rem;

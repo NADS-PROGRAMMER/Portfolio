@@ -10,10 +10,12 @@
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 html {
   overflow-x: hidden;
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 // By default, the header for desktop sizes is hidden.
