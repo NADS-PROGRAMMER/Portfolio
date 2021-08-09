@@ -30,7 +30,7 @@ const timeline = gsap.timeline(); // gsap instance animation.
  * @param {*} dot 
  * - the navigation button for all the images.
  */
-function showImage(source, serviceTitle, serviceDefinition, dot) {
+function showImage(source, serviceTitle, serviceDefinition) {
 
     let image = document.getElementById('image-service');
     let title = document.querySelector('#service-title');
@@ -39,8 +39,8 @@ function showImage(source, serviceTitle, serviceDefinition, dot) {
     if (!timeline.isActive()) {
 
         // Here is the animation of the image slider.
-        timeline.from('#image-service', {opacity: 0, x: "100%", duration: 2.5, ease: "expo.out"});
-        timeline.from('#service-main-content',{opacity: 0, x: "100%", duration: 2.5, ease: "expo.out"}, "-=2.5");
+        timeline.from('#image-service', {opacity: 0, duration: 1.5, ease: "expo.out"});
+        timeline.from('#service-main-content',{opacity: 0, duration: 1.5, ease: "expo.out"}, "-=2.5")
 
         image.src = source; // set the source.
         title.textContent = serviceTitle; // set the service title.

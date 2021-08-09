@@ -46,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Horizontal Animation
+    /**
+     * This is the animation for the element
+     * in horizontal axis.
+     */
     function horizontalAnimation(xValue, id, element) {
 
         const {top, bottom} = element.getBoundingClientRect();
@@ -165,14 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
         horizontalAnimation("100%", "#project-3-section", project3Section);
     }
 
+    // Events when the user scrolls the page.
     document.addEventListener('scroll', () => {
 
-    mainSectionAnimateOnScroll();
-    aboutSectionAnimation();
-    servicesAnimation();
-    skillsAnimation();
-    projectsAnimation();
-});
+        mainSectionAnimateOnScroll();
+        aboutSectionAnimation();
+        servicesAnimation();
+        skillsAnimation();
+        projectsAnimation();
+    });
 })
 
 
