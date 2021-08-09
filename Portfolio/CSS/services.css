@@ -95,6 +95,10 @@
   margin: 0 0.5rem;
 }
 
+.main_services .dots .selected-image {
+  background-color: red;
+}
+
 .main_services .dots span:hover {
   cursor: pointer;
   background-color: #e6d8c7;
