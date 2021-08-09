@@ -38,13 +38,13 @@ function showImage(source, serviceTitle, serviceDefinition) {
 
     if (!timeline.isActive()) {
 
-        // Here is the animation of the image slider.
-        timeline.from('#image-service', {opacity: 0, duration: 1.5, ease: "expo.out"});
-        timeline.from('#service-main-content',{opacity: 0, duration: 1.5, ease: "expo.out"}, "-=2.5")
-
         image.src = source; // set the source.
         title.textContent = serviceTitle; // set the service title.
         definition.textContent = serviceDefinition; // set the definition of the service.
+
+        // Here is the animation of the image slider.
+        timeline.from('#image-service', {opacity: 0, duration: 1.5, ease: "expo.out"});
+        timeline.from('#service-main-content',{opacity: 0, duration: 1.5, ease: "expo.out"}, "-=2.5")
     }
 }
 
