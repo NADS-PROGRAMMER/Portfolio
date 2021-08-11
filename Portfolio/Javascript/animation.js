@@ -1,21 +1,20 @@
 "use strict";
 
-/**
+/************************************************************
  * THIS IS THE PROGRAM FOR THE ANIMATION
- * OF ALL THE ELEMENTS onScroll().
- */
+ * OF ALL THE ELEMENTS WHEN THE onScroll() EVENT IS TRIGGERED.
+ ************************************************************/
 let easeAnimation = "sine.out";
 let easeDuration = 0.5;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    
+    gsap.to('*', {opacity: 1, duration: easeDuration, ease: easeAnimation});
     // Vertical Animation
     function verticalAnimation(yValue = "100%", id, element) {
 
         /** I use destructuring because we only need two properties 
-         *  of the getBoundingClientRect() method.
-         */
+         *  of the getBoundingClientRect() method. */
         const {top, bottom} = element.getBoundingClientRect();
 
         if ((top <= window.innerHeight)) {
@@ -365,37 +364,39 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('form').onsubmit = () => {
 
         // Here's the variables
-        const name = document.getElementById('full-name').value;
-        const email = document.getElementById('e-mail').value;
-        const message = document.getElementById('message').value;
+        const name = document.querySelector('#full-name').value;
+        const email = document.querySelector('#e-mail').value;
+        const message = document.querySelector('#message').value;
         const modal = document.querySelector('#modal');
+        const modalContent = document.querySelector('#modal-message');
+
+        modal.style.opacity = '0';
 
         /** Checks if one of the required fields are empty. */
         if (String(name).length < 1 || String(email).length < 1 || String(message).length < 1) {
 
-            document.querySelector('#modal-message').textContent = 'Please fill up all the required fields.' // Change the paragraph content.
+            modalContent.textContent = 'Please fill up all the required fields.' // Change the paragraph content.
 
+            gsap.to('#modal', {opacity: 1, duration: 1.5, ease: easeAnimation});
             modal.style.display = 'block'; // Show the modal.
             modal.style.background = '#b33f40'; // Change the background to matte red.
-            modal.style.animation = 'modalAnimation 1000ms forwards'; // Set the animation to it.
-
         }
         /** Here is the code that would execute if the above conditions aren't met. */
         else { 
 
-            document.querySelector('#modal-message').textContent = 'Your message has been sent!' // Change the paragraph content.
+            modalContent.textContent = 'Your message has been sent!' // Change the paragraph content.
 
+            gsap.to('#modal', {opacity: 1, duration: 1.5, ease: easeAnimation});
             modal.style.display = 'block'; // Show the modal.
             modal.style.background = '#48A14D'; // Set the background of the modal to matte green.
-            modal.style.animation = 'modalAnimation 1000ms forwards'; // Set the animation to it.
-            
+
             // Resets the form and hides the modal after 1.5 seconds.
             setTimeout(() => {
                 modal.style.display = 'none';
                 document.getElementById('full-name').value = '';
                 document.getElementById('e-mail').value = '';
                 document.getElementById('message').value = '';
-            }, 1500);
+            }, 2000);
         }
         return false; // we return false so that the form do not go to another page.
     }
