@@ -285,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let java = document.querySelector('#java');
     let adobeXD = document.querySelector('#adobe-xd');
     let scss = document.querySelector('#scss');
+    let sql = document.querySelector('#sql');
 
     html.addEventListener('mouseover', () => {showSkillName('HTML', '#html')});
     html.addEventListener('mouseleave', () => {hideSkillName('#html')});
@@ -304,7 +305,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scss.addEventListener('mouseover', () => {showSkillName('SCSS', '#scss')});
     scss.addEventListener('mouseleave', () => {hideSkillName('#scss')});
 
-
+    sql.addEventListener('mouseover', () => {showSkillName('MySQL', '#sql')});
+    sql.addEventListener('mouseleave', () => {hideSkillName('#sql')});
 
     /*********************************************************************************
      * HERE ARE THE METHODS USED FOR THE ANIMATION ON THE SKILLS LOGO.

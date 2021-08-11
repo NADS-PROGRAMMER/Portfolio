@@ -26,7 +26,6 @@
   .skills-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // width: 50vh;
     .skill {
       @include displayFlex(column, center, center);
       margin: 1rem 1rem;
@@ -56,7 +55,7 @@
 // MEDIA QUERIES.
 @media only screen and (min-width: 768px) {
   .skills .skills-content {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
