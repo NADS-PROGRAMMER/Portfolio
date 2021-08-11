@@ -4,8 +4,12 @@
  * THIS IS THE PROGRAM FOR THE ANIMATION
  * OF ALL THE ELEMENTS onScroll().
  */
+let easeAnimation = "sine.out";
+let easeDuration = 0.5;
+
 document.addEventListener('DOMContentLoaded', () => {
 
+    
     // Vertical Animation
     function verticalAnimation(yValue = "100%", id, element) {
 
@@ -15,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const {top, bottom} = element.getBoundingClientRect();
 
         if ((top <= window.innerHeight)) {
-            gsap.to(id, {y: "0%", duration: 2.5, ease: "expo.out"});
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {y: "0%", duration: easeDuration, ease: easeAnimation});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         } 
         else {
 
@@ -26,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
 
         if ((bottom >= 0)) {
-            gsap.to(id, {y: "0%", duration: 2.5, ease: "expo.out"});
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {y: "0%", duration: easeDuration, ease: easeAnimation});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         } 
         else {
 
@@ -46,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const {top, bottom} = element.getBoundingClientRect();
 
         if ((top <= window.innerHeight)) {
-            gsap.to(id, {x: 0, duration: 2.5, ease: "expo.out"});
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {x: 0, duration: easeDuration, ease: easeAnimation});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         } 
         else {
 
@@ -57,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
 
         if ((bottom >= 0)) {
-            gsap.to(id, {x: 0, duration: 2.5, ease: "expo.out"});
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {x: 0, duration: easeDuration, ease: easeAnimation});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         } 
         else {
 
@@ -73,12 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const {top, bottom} = button.getBoundingClientRect();
 
         if (top <= window.innerHeight)
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         else
             gsap.to(id, {opacity: 0});
 
         if (bottom >= 0)
-            gsap.to(id, {opacity: 1, duration: 2.5, ease: "expo.out"});
+            gsap.to(id, {opacity: 1, duration: easeDuration, ease: easeAnimation});
         else
             gsap.to(id, {opacity: 0});
     }
@@ -235,8 +239,8 @@ function showImage(source, serviceTitle, serviceDefinition) {
         definition.textContent = serviceDefinition; // set the definition of the service.
 
         // Here is the animation of the image slider.
-        timeline.from('#image-service', {opacity: 0, duration: 1.5, ease: "expo.out"});
-        timeline.from('#service-main-content',{opacity: 0, duration: 1.5, ease: "expo.out"}, "-=2.5")
+        timeline.from('#image-service', {opacity: 0, duration: easeDuration, ease: easeAnimation});
+        timeline.from('#service-main-content',{opacity: 0, duration: easeDuration, ease: easeAnimation}, "-=2.5")
     }
 }
 
