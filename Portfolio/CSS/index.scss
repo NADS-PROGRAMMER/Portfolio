@@ -34,7 +34,7 @@ header {
 }
 
 .main::before {
-  background-color: rgba($color: #fff, $alpha: 0.5);
+  background-color: rgba($color: #fff, $alpha: 0.4);
   content: "";
   position: absolute;
   z-index: -1;
@@ -140,23 +140,29 @@ header {
 // Media queries for DESKTOP SCREEN SIZES.
 @media only screen and (min-width: 1200px) {
   header {
-    @include displayFlex(row, none, space-around);
+    @include displayFlex(row, center, space-around);
     padding: 2rem;
+
+    section h1 {
+      font-size: 1.5rem;
+    }
     ul {
       list-style: none; // remove the bullet points.
-
       // Display properties.
       @include displayFlex(row, center, none);
       li {
-        margin: 0 4rem; // set the margin of left and right to 4 * 16px.
+        margin: 0 2.5rem; // set the margin of left and right to 4 * 16px.
 
         // anchor tags styles.
         a {
+          font-size: 1.1rem;
+          font-weight: 500;
           text-decoration: none;
           color: black;
         }
         a:hover {
-          border-bottom: 1px solid black;
+          border-bottom: 2px solid black;
+          width: auto;
         }
         // end of a tags styles.
       }
@@ -186,7 +192,7 @@ header {
     .container-1-content {
       // Display properties.
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       .section-title {
         width: 50%;
         h1 {

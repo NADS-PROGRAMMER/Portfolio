@@ -252,14 +252,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     firstImage.addEventListener('click', function() {
 
-        message = `Business without advertisements is boring. I can help you to build your own E-Commerce Site so that you can introduce your wonderful products to your customers. Simple, Fast, and Easy to use website is cool!`;
+        message = `Business without advertisements is boring. I can help you to build your own E-Commerce Site so that you can introduce your wonderful products to your customers. Simple, Fast, and Easy to use website!`;
 
         showImage('Portfolio/Javascript/Services Image/Web 1920 – 3.jpg', 'E-Commerce Site', message);
     });
 
     secondImage.addEventListener('click', function() {
 
-        message = `Managing your products is a crucial part when you are taking businesses. BUT! Application like this would help to organize and track your products. It is user-friendly application so that you don't need to worry about what to do in the app. I can provide you good quality applications and designs for your own business.`;
+        message = `Managing your products is a crucial part when you are taking businesses. BUT! Application like this would help you to organize and track your products. It is user-friendly application so that you don't need to worry about how to use the app. I can provide you good quality designs and applications for your own business.`;
 
         showImage('Portfolio/Javascript/Services Image/Product Management System.png', 'Product Management System', message);
     });
