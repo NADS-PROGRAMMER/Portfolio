@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   color: $tertiaryColor;
 }
 
@@ -49,7 +49,6 @@ header {
   A container that contains the navbar for mobile device,
   title section, and the basic info such as the location, bachelor's
   degree etc.
-
 ****/
 .container-1 {
   /**
