@@ -181,6 +181,11 @@ document.addEventListener('DOMContentLoaded', () => {
         horizontalAnimation("100%", "#project-3-section", project3Section);
     }
 
+    document.querySelector('#up-arrow').addEventListener('click', () => {
+
+        window.scrollTo(0, 0);
+    });
+
     // Events when the user scrolls the page.
     document.addEventListener('scroll', () => {
 
@@ -193,11 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
 }) // END OF onScroll() animations for all the elements in the webpage.
 
 
-
-
 /***********************
- * This file is for the image slider on the 
- * services section in the webpage.
+ * THIS FILE IS FOR THE IMAGE SLIDER 
+ * ON THE SERVICES SECTION IN THE WEBPAGE.
  ***********************/
 
 /**

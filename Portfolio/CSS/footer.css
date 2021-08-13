@@ -120,6 +120,7 @@ footer nav .copyright-section {
           transform: rotate(-90deg);
   -webkit-animation: upArrowAnimation 2000ms infinite alternate;
           animation: upArrowAnimation 2000ms infinite alternate;
+  cursor: pointer;
 }
 
 @-webkit-keyframes upArrowAnimation {

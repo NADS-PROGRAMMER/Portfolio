@@ -76,6 +76,7 @@ footer {
 
   // animation
   animation: upArrowAnimation 2000ms infinite alternate;
+  cursor: pointer;
 }
 
 @keyframes upArrowAnimation {
