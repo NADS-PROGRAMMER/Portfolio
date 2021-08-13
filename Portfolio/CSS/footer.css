@@ -93,6 +93,49 @@ footer nav .copyright-section {
           justify-content: flex-start;
 }
 
+#up-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+  background: #171717;
+  color: #e6d8c7;
+  border: 2px solid #e6d8c7;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-animation: upArrowAnimation 2000ms infinite alternate;
+          animation: upArrowAnimation 2000ms infinite alternate;
+}
+
+@-webkit-keyframes upArrowAnimation {
+  to {
+    -webkit-box-shadow: 0px 0px 10px #fdfbf9;
+            box-shadow: 0px 0px 10px #fdfbf9;
+  }
+}
+
+@keyframes upArrowAnimation {
+  to {
+    -webkit-box-shadow: 0px 0px 10px #fdfbf9;
+            box-shadow: 0px 0px 10px #fdfbf9;
+  }
+}
+
 /** MEDIA QUERIES */
 @media only screen and (min-width: 576px) {
   footer nav {
