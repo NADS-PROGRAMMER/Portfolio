@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * This is the animation for the element
-     * in horizontal axis.
-     */
+     * in horizontal axis. */
     function horizontalAnimation(xValue, id, element) {
 
         const {top, bottom} = element.getBoundingClientRect();
