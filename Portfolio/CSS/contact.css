@@ -123,7 +123,8 @@
 
 .message-me-section .message-me-section-content .form-section #form #full-name,
 .message-me-section .message-me-section-content .form-section #form #e-mail,
-.message-me-section .message-me-section-content .form-section #form #message {
+.message-me-section .message-me-section-content .form-section #form #message,
+.message-me-section .message-me-section-content .form-section #form #password {
   padding: 0.5rem;
   font-size: 1rem;
   color: #171717;
@@ -137,7 +138,8 @@
 
 .message-me-section .message-me-section-content .form-section #form #full-name:focus,
 .message-me-section .message-me-section-content .form-section #form #e-mail:focus,
-.message-me-section .message-me-section-content .form-section #form #message:focus {
+.message-me-section .message-me-section-content .form-section #form #message:focus,
+.message-me-section .message-me-section-content .form-section #form #password:focus {
   outline: 1px solid #e6d8c7;
 }
 
@@ -246,7 +248,8 @@
   }
   .message-me-section .message-me-section-content .form-section #form #full-name,
   .message-me-section .message-me-section-content .form-section #form #e-mail,
-  .message-me-section .message-me-section-content .form-section #form #message {
+  .message-me-section .message-me-section-content .form-section #form #message,
+  .message-me-section .message-me-section-content .form-section #form #password {
     font-size: 1.3rem;
   }
 }
