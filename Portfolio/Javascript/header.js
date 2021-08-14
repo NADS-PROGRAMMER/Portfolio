@@ -1,13 +1,14 @@
 "use strict"
 
-const headerItems = document.querySelectorAll('.header-item-content');
+// Get the header items.
+const [home, aboutMe, services, stack, projects] = document.querySelectorAll('.header-item-content');
 
-const [home, aboutMe, services, stack, projects] = headerItems;
-
-function addScrollToEvent(element, elementTo) {
+/** Function to add events that when the user clicks
+ * the item, it will scroll to its respective section. */
+function addScrollToEvent(element, elementID) {
 
     element.addEventListener('click', () => {
-        document.querySelector(elementTo).scrollIntoView();
+        document.querySelector(elementID).scrollIntoView();
     });
 }
 
