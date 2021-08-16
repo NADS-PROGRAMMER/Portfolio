@@ -6,7 +6,6 @@ const [aboutMeItem1, servicesItem1, stackItem1, projectsItem1, aboutMeItem2, ser
 window.addEventListener('resize', () => {
 
     gsap.to('.menu', {y: "-100%", duration: .3, ease: "expo.out"});
-    console.log('resized')
 })
 /** Function to add events that when the user clicks
  * the item, it will scroll to its respective section. */
