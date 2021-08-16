@@ -1,0 +1,43 @@
+@import "config";
+.menu {
+  @include displayFlex(column, center, space-evenly);
+  transform: translateY(-100%);
+  display: none;
+  background: $tertiaryColor;
+  box-shadow: 0px 0px 3px white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 45vh;
+
+  section {
+    padding: 0.3rem 0;
+    span a,
+    h1 {
+      font-size: 1.6rem;
+      color: $secondary;
+      cursor: pointer;
+    }
+  }
+  span a:hover {
+    border-bottom: 1px solid $secondary;
+  }
+}
+
+// Close button styles ('x').
+#close-button-container {
+  align-self: flex-end;
+  text-align: center;
+  margin-right: 2.5rem;
+  #close-button {
+    cursor: pointer;
+  }
+}
+
+// Hamburger symbol styles.
+#hamburger {
+  cursor: pointer;
+}
