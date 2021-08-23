@@ -1,0 +1,25 @@
+@import "./media";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  color: $tertiaryColor;
+  opacity: 0;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 14px;
+  scroll-behavior: smooth;
+
+  @include Small {
+    font-size: 16px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
