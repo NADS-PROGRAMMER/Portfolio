@@ -1,4 +1,4 @@
-@import "config";
+@import "./config";
 
 footer {
   @include displayFlex(column, none, none);

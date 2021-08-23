@@ -1,4 +1,4 @@
-@import "config";
+@import "./config";
 .menu {
   @include displayFlex(column, center, space-evenly);
   transform: translateY(-100%);
