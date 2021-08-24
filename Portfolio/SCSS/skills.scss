@@ -1,16 +1,12 @@
-@import "./config";
+@import "./config", "./media";
 
-/***
-  These are all the styles for the skill sections.
-****/
-
+/*** These are all the styles for the skill sections. ****/
 .skills {
   // general styles
-  background: $tertiaryColor;
-  padding: 2rem;
-
   // DISPLAY properties.
   @include displayFlex(column, center, center);
+  background: $tertiaryColor;
+  padding: 2rem;
 
   // title section
   .title-section {
@@ -21,26 +17,36 @@
     }
     @include horizontalLineStyle(); // *SEE THE DEFINITION @_config.scss file*.
   }
-
-  // Skills Content (Division that contains the the section of all the skills images and names).
-  .skills-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    .skill {
-      @include displayFlex(column, center, center);
-      margin: 1rem 1rem;
-      img {
-        width: 3.5rem;
-      }
-      // By default, when it is not get hovered, the name of the logo is hidden. (See the implementation of service.js).
-      p {
-        visibility: hidden;
-        color: $secondary;
-      }
+  // 1200px
+  @include Medium {
+    padding: 4rem;
+    .title-section h1 {
+      font-size: 3rem;
     }
   }
 }
 
+// Skills Content (Division that contains the the section of all the skills images and names).
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .skill {
+    @include displayFlex(column, center, center);
+    margin: 1rem 1rem;
+    img {
+      width: 3.5rem;
+    }
+    // By default, when it is not get hovered, the name of the logo is hidden. (See the implementation of service.js).
+    p {
+      visibility: hidden;
+      color: $secondary;
+    }
+  }
+  // 768px
+  @include Small {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
 // This is the animation to be run when the user hovers to the skill image logo
 // This animation invoke in the skills.js
 @keyframes animationVisibility {
@@ -49,20 +55,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-// MEDIA QUERIES.
-@media only screen and (min-width: 768px) {
-  .skills .skills-content {
-    grid-template-columns: repeat(7, 1fr);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .skills {
-    padding: 4rem;
-    .title-section h1 {
-      font-size: 3rem;
-    }
   }
 }
