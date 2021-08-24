@@ -1,6 +1,6 @@
 "use strict"
 
-// Get the header items.
+// Get the header items including the items in modal.
 const [aboutMeItem1, servicesItem1, stackItem1, projectsItem1, aboutMeItem2, servicesItem2, stackItem2, projectsItem2] = document.querySelectorAll('.header-item-content');
 
 window.addEventListener('resize', () => {
@@ -18,7 +18,7 @@ function addScrollToEvent(element, elementID) {
     });
 }
 
-function openMenu() {
+function addOpenMenuEvent() {
     document.querySelector('#hamburger').addEventListener('click', () => {
 
         gsap.to('.menu', {y: "0%", duration: .3, ease: "expo.out"});
@@ -26,7 +26,7 @@ function openMenu() {
     });
 }
 
-function closeMenu(idOrClass) {
+function addCloseMenuEvent(idOrClass) {
 
     document.querySelector(idOrClass).addEventListener('click', () => {
 
@@ -34,7 +34,7 @@ function closeMenu(idOrClass) {
     })
 }
 
-
+// Adding events.
 addScrollToEvent(aboutMeItem1, '.about');
 addScrollToEvent(servicesItem1, '.main_services');
 addScrollToEvent(stackItem1, '.skills');
@@ -45,5 +45,5 @@ addScrollToEvent(servicesItem2, '.main_services');
 addScrollToEvent(stackItem2, '.skills');
 addScrollToEvent(projectsItem2, '.projects');
 
-openMenu();
-closeMenu('#close-button');
+addOpenMenuEvent();
+addCloseMenuEvent('#close-button');
