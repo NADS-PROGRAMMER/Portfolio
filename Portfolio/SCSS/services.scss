@@ -1,6 +1,4 @@
-@import "./config";
-
-// Here are the variables.
+@import "./config", "./media";
 
 // HERE IS THE MAIN DIVISION OF THE SERVICES SECTION OF THE WEBPAGE.
 .main_services {
@@ -14,121 +12,103 @@
       @include title();
     }
     @include horizontalLineStyle();
-  }
 
-  // Division of the dots navigation.
-  .dots {
-    margin-top: 1rem;
-
-    /**
-      Here is the actual dot and set its border-radius to 50% to
-      make it fully rounded circle.
-    **/
-    span {
-      display: inline-block;
-      background: $fourthColour;
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%;
-      margin: 0 0.5rem;
-    }
-
-    span:hover {
-      cursor: pointer;
-      background-color: $secondary;
+    .title {
+      // 1200px
+      @include Medium {
+        font-size: 3rem;
+      }
     }
   }
+}
 
-  // Division of services that contains the image, name of the service, and the button.
-  .services {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 90vw;
+// DIVISION OF SERVICES THAT CONTAINS THE IMAGE, NAME OF THE SERVICE, DESCRIPTION AND THE BUTTON.
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 90vw;
 
-    // Image section.
-    .image {
-      grid-column: 1/-1;
-      img {
-        width: 100%;
-        box-shadow: 0px 0px 5px 1px $fourthColour;
-      }
-      @keyframes animate {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
+  // IMAGE SECTION.
+  .image {
+    grid-column: 1/-1;
+    img {
+      width: 100%;
+      box-shadow: 0px 0px 5px 1px $fourthColour;
+    }
+    // 1200px
+    @include Medium {
+      width: 50%;
+    }
+  }
+
+  // DIVISION THAT HOLDS THE NAME AND THE DESCRIPTION OF THE SERVICE.
+  .content {
+    grid-column: 1/4;
+    * {
+      color: $fourthColour;
     }
 
-    // Content section that holds the name of the service and its definition.
-    .content {
-      grid-column: 1/4;
-      * {
-        color: $fourthColour;
-      }
-
+    h1 {
+      font-size: 1.5rem;
+    }
+    button {
+      @include buttonStyle();
+    }
+    button:hover {
+      @include buttonHoverStyle();
+    }
+    // 1200px
+    @include Medium {
+      width: 50%;
+      padding: 1rem;
       h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
       button {
-        @include buttonStyle();
-      }
-      button:hover {
-        @include buttonHoverStyle();
+        width: 30%;
       }
     }
   }
-}
 
-// MEDIA QUERIES.
-@media only screen and (min-width: 576px) {
-  .main_services .services {
+  // 576px
+  @include Mobile {
     max-width: 60vw;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .main_services .services {
+  // 768px
+  @include Small {
     max-width: 60vw;
   }
-}
-
-@media only screen and (min-width: 992px) {
-  .main_services .services {
+  // 992px
+  @include ExtraSmall {
     max-width: 55vw;
   }
-}
-@media only screen and (min-width: 1200px) {
-  .main_services {
-    // Change the font size of title on the service section.
-    .title-section .title {
-      font-size: 3rem;
-    }
-
-    .services {
-      @include displayFlex(row, center, space-evenly);
-      max-width: 65vw;
-      .image {
-        width: 50%;
-      }
-      .content {
-        width: 50%;
-        padding: 1rem;
-        h1 {
-          font-size: 2rem;
-        }
-        button {
-          width: 30%;
-        }
-      }
-    }
+  // 1200px
+  @include Medium {
+    @include displayFlex(row, center, space-evenly);
+    max-width: 65vw;
+  }
+  // 1400px
+  @include DesktopSize {
+    max-width: 60vw;
   }
 }
 
-@media only screen and (min-width: 1400px) {
-  .main_services .services {
-    max-width: 60vw;
+// DOTS NAVIGATION.
+.dots {
+  margin-top: 1rem;
+  /** Here is the actual dot and set its border-radius to 50% to
+  make it fully rounded circle. **/
+  span {
+    display: inline-block;
+    background: $fourthColour;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+  }
+
+  span:hover {
+    cursor: pointer;
+    background-color: $secondary;
   }
 }
