@@ -4,8 +4,8 @@
  * THIS IS THE PROGRAM FOR THE ANIMATION
  * OF ALL THE ELEMENTS WHEN THE onScroll() EVENT IS TRIGGERED.
  ************************************************************/
-let easeAnimation = "sine.out";
-let easeDuration = 0.5;
+const easeAnimation = "sine.out";
+const easeDuration = 0.5;
 
 document.addEventListener('DOMContentLoaded', () => {
 

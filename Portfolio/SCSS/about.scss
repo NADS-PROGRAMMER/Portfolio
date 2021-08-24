@@ -1,108 +1,96 @@
-@import "./config";
+@import "./config", "./media";
 
+.about {
+  @include Medium {
+    background: $tertiaryColor;
+    padding: 4rem;
+  }
+}
 // It is the div that contains the title, paragraph, and image.
 .about-content {
+  @include displayFlex(column, center, center);
   background-color: $tertiaryColor;
   padding: 2rem; // end of general styles.
 
-  @include displayFlex(column, center, center);
+  @include Small {
+    @include displayFlex(row, center, center);
+  }
+}
 
-  // <section> that contains the actual image
-  .image img {
+.about-image-section {
+  img {
     max-width: 20rem;
     width: 100%;
     border-radius: 50%;
     box-shadow: 0px 0px 10px $fourthColour;
   }
-  /**
+  // MEDIA QUERIES FOR ".about-image-section".
+  @include Small {
+    align-self: flex-start;
+    width: 50%;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+  @include ExtraSmall {
+    align-self: center;
+  }
+  @include Medium {
+    align-self: center;
+    max-width: 50%;
+    width: 20rem;
+    margin: 0 3rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/**
     Contents of the about. */
-  .about-content_info {
-    * {
-      // set all the elements of the all elements under the about-content-info class.
-      color: $fourthColour;
-    }
+.about-content_info {
+  * {
+    // set all the elements of the all elements under the about-content-info class.
+    color: $fourthColour;
+  }
 
-    // Section that contains the title "About" and the horizontal line styles.
-    .title-section {
-      @include horizontalLineStyle();
-      @include titleSection();
+  // Section that contains the title "About" and the horizontal line styles.
+  .title-section {
+    @include horizontalLineStyle();
+    @include titleSection();
+    h1 {
       // "About"
-      h1 {
-        @include title();
-      }
+      @include title();
     }
-    // About Paragraph.
+  }
+  // About Paragraph.
+  p {
+    color: $fourthColour;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  // MEDIA QUERIES FOR ".about-content-info".
+  @include Small {
+    align-self: baseline;
+    width: 50%;
+    .title-section {
+      align-items: flex-start;
+    }
     p {
-      color: $fourthColour;
-      font-size: 1rem;
-      text-align: center;
+      text-align: left;
     }
   }
-}
-
-// MEDIA QUERIES
-
-@media only screen and (min-width: 768px) {
-  .about-content {
-    @include displayFlex(row, center, center);
-    .image {
-      align-self: flex-start;
-      width: 50%;
-      margin-right: 0.5rem;
-      text-align: center;
-    }
-
-    .about-content_info {
-      align-self: baseline;
-      width: 50%;
-      .title-section {
-        align-items: flex-start;
+  @include Medium {
+    .title-section {
+      h1 {
+        font-size: 3rem;
       }
-      p {
-        text-align: left;
+      .horizontal-style {
+        width: 15rem;
       }
     }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .about-content {
-    .image {
-      align-self: center;
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .about {
-    background: $tertiaryColor;
-    padding: 4rem;
-  }
-  .about-content {
-    .image {
-      align-self: center;
-      max-width: 50%;
-      width: 20rem;
-      margin: 0 3rem;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .about-content_info {
-      .title-section {
-        h1 {
-          font-size: 3rem;
-        }
-        .horizontal-style {
-          width: 15rem;
-        }
-      }
-
-      p {
-        font-size: 1.2rem;
-      }
+    p {
+      font-size: 1.2rem;
     }
   }
 }

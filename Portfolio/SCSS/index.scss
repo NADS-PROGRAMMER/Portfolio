@@ -1,64 +1,12 @@
-@import "./config";
+@import "./config", "./global", "./media";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Poppins, sans-serif;
-  color: $tertiaryColor;
-  opacity: 0;
-}
-
-body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-html {
-  overflow-x: hidden;
-  font-size: 14px;
-  scroll-behavior: smooth;
-}
-
-// By default, the header for desktop sizes is hidden.
-header {
-  display: none;
-}
-
-.main {
-  position: relative;
-  z-index: 1;
-  height: auto;
-  background: url("\/Final Image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.main::before {
-  background-color: rgba($color: #fff, $alpha: 0.4);
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-}
-
-/***
-
-  A container that contains the navbar for mobile device,
-  title section, and the basic info such as the location, bachelor's
-  degree etc.
-****/
 .container-1 {
-  /**
-  general styles
-  */
   @include displayFlex(column, none, center);
   height: auto;
   padding: 2rem;
-
+  * {
+    margin: 0.4rem 0;
+  }
   // Navbar
   .navbar {
     @include displayFlex(row, none, space-between);
@@ -77,30 +25,6 @@ header {
     }
   } // end of navbar
 
-  // section that contains the title and the subtitle and the hr
-  .section-title {
-    h1 {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    p {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    hr {
-      background-color: $tertiaryColor;
-      width: 5rem;
-      height: 5px;
-    }
-    // buttons and the style for hover
-    button {
-      @include buttonStyle();
-    }
-    button:hover {
-      @include buttonHoverStyle();
-    } // end of button styles
-  } // end of title section
-
   .basic-info {
     section .infos {
       @include displayFlex(row, center, flex-start);
@@ -114,78 +38,15 @@ header {
       }
     }
   }
-  * {
-    margin: 0.4rem 0;
-  }
-}
-// END OF ALL THE MAIN STYLES
 
-@media only screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-  .container-1 .container-1-content {
-    padding: 3rem;
-    .section-title {
-      h1 {
-        font-size: 1.2rem;
-      }
-      p {
-        font-size: 2.5rem;
-      }
-    }
-  }
-}
-
-// Media queries for DESKTOP SCREEN SIZES.
-@media only screen and (min-width: 1200px) {
-  header {
-    @include displayFlex(row, center, space-around);
-    padding: 2rem;
-
-    section h1 {
-      font-size: 1.5rem;
-    }
-    ul {
-      list-style: none; // remove the bullet points.
-      // Display properties.
-      @include displayFlex(row, center, none);
-      li {
-        margin: 0 2.5rem; // set the margin of left and right to 4 * 16px.
-
-        // anchor tags styles.
-        a {
-          font-size: 1.1rem;
-          font-weight: 500;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-        }
-        a:hover {
-          border-bottom: 2px solid black;
-          width: auto;
-        }
-        // end of a tags styles.
-      }
-    }
-  } // end of styles for header
-
-  // This is the main container
-  .main {
-    /** We set the bg attachment to fixed to
-    have a parallax effect. */
-    background-attachment: fixed;
-    min-height: 70vh;
-    height: 100vh;
-  }
-
-  .container-1 {
+  // STYLES FOR 1200px screen sizes.
+  @include Medium {
     height: 70vh;
     align-items: center;
     justify-content: center;
 
-    // hides the navbar with the pie button
     .navbar {
+      // hides the navbar with the pie button
       display: none;
     }
 
@@ -217,5 +78,112 @@ header {
         }
       }
     }
-  } // end of container 1
-} // END OF MEDIA QUERIES FOR 1200px minimum width devices.
+  } // END OF 1200px SCREEN SIZES STYLE.
+} // END OF CONTAINER-1 STYLES.
+
+// HEADER STYLES
+header {
+  // Hidden by default.
+  display: none;
+
+  // MEDIA QUERIES FOR 1200px screen sizes.
+  @include Medium {
+    @include displayFlex(row, center, space-around);
+    padding: 2rem;
+
+    section h1 {
+      font-size: 1.5rem;
+    }
+    ul {
+      @include displayFlex(row, center, none);
+      list-style: none;
+
+      li {
+        margin: 0 2.5rem; // set the margin of left and right to 4 * 16px.
+        a {
+          font-size: 1.1rem;
+          font-weight: 500;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+        }
+        a:hover {
+          border-bottom: 2px solid black;
+          width: auto;
+        }
+      }
+    }
+  } // END OF 1200px HEADER STYLES.
+} // END OF HEADER STYLES.
+
+// MAIN STYLES
+.main {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  background: url("\/Final Image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // MAIN STYLES WHEN 1200px SCREEN SIZES.
+  @include Medium {
+    /** We set the bg attachment to fixed to
+    have a parallax effect. */
+    background-attachment: fixed;
+    min-height: 70vh;
+    height: 100vh;
+  } // END OF 1200px MAIN STYLES.
+}
+
+.main::before {
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+} // END OF MAIN STYLES
+
+// STYLES FOR CONTAINER-1 CONTENT
+.container-1-content {
+  @include Small {
+    padding: 3rem;
+  }
+} // END OF STYLES FOR CONTAINER-1 CONTENT
+
+// SECTION THAT CONTAINS THE TITLE, SUBTITLE, HORIZONTAL LINE AND BUTTON
+.section-title {
+  h1 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  hr {
+    background-color: $tertiaryColor;
+    width: 5rem;
+    height: 5px;
+  }
+  // buttons and the style for hover
+  button {
+    @include buttonStyle();
+  }
+  button:hover {
+    @include buttonHoverStyle();
+  } // end of button styles
+
+  // For 768px screen sizes.
+  @include Small {
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 2.5rem;
+    }
+  } // END OF 768px section-title STYLES.
+} // END OF TITLE SECTION.
