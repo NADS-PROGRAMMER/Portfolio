@@ -3,6 +3,12 @@ $extraSmall: 992px;
 $medium: 1200px;
 $desktopSize: 1400px;
 
+@mixin Mobile {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
 @mixin Small {
   @media only screen and (min-width: 768px) {
     @content;
