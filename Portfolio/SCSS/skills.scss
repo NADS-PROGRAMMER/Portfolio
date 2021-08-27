@@ -28,8 +28,16 @@
 
 // Skills Content (Division that contains the the section of all the skills images and names).
 .skills-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .skills-content > * {
+    flex: 1 1 10rem;
+  }
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
   .skill {
     @include displayFlex(column, center, center);
     margin: 1rem 1rem;
@@ -41,10 +49,6 @@
       visibility: hidden;
       color: $secondary;
     }
-  }
-  // 768px
-  @include Small {
-    grid-template-columns: repeat(7, 1fr);
   }
 }
 // This is the animation to be run when the user hovers to the skill image logo
