@@ -1,5 +1,40 @@
 @import "./config", "./global", "./media";
 
+// HEADER STYLES
+header {
+  // Hidden by default.
+  display: none;
+
+  // MEDIA QUERIES FOR 1200px screen sizes.
+  @include Medium {
+    @include displayFlex(row, center, space-around);
+    padding: 2rem;
+
+    section h1 {
+      font-size: 1.5rem;
+    }
+    ul {
+      @include displayFlex(row, center, none);
+      list-style: none;
+
+      li {
+        margin: 0 2.5rem; // set the margin of left and right to 4 * 16px.
+        a {
+          font-size: 1.1rem;
+          font-weight: 500;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+        }
+        a:hover {
+          border-bottom: 2px solid $fourthColour;
+          width: auto;
+        }
+      }
+    }
+  } // END OF 1200px HEADER STYLES.
+} // END OF HEADER STYLES.
+
 .container-1 {
   @include displayFlex(column, none, center);
   height: auto;
@@ -32,6 +67,7 @@
 
       img {
         height: 1.5rem;
+        filter: invert(100%);
       }
       * {
         margin: 0.5rem 1rem 0.5rem 0;
@@ -81,50 +117,19 @@
   } // END OF 1200px SCREEN SIZES STYLE.
 } // END OF CONTAINER-1 STYLES.
 
-// HEADER STYLES
-header {
-  // Hidden by default.
-  display: none;
-
-  // MEDIA QUERIES FOR 1200px screen sizes.
-  @include Medium {
-    @include displayFlex(row, center, space-around);
-    padding: 2rem;
-
-    section h1 {
-      font-size: 1.5rem;
-    }
-    ul {
-      @include displayFlex(row, center, none);
-      list-style: none;
-
-      li {
-        margin: 0 2.5rem; // set the margin of left and right to 4 * 16px.
-        a {
-          font-size: 1.1rem;
-          font-weight: 500;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-        }
-        a:hover {
-          border-bottom: 2px solid black;
-          width: auto;
-        }
-      }
-    }
-  } // END OF 1200px HEADER STYLES.
-} // END OF HEADER STYLES.
-
 // MAIN STYLES
 .main {
   position: relative;
   z-index: 1;
   height: auto;
-  background: url("\/Final Image.jpg");
+  background: url("\/BG-01.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
+  * {
+    color: $fourthColour;
+  }
   // MAIN STYLES WHEN 1200px SCREEN SIZES.
   @include Medium {
     /** We set the bg attachment to fixed to
@@ -134,18 +139,6 @@ header {
     height: 100vh;
   } // END OF 1200px MAIN STYLES.
 }
-
-.main::before {
-  background-color: rgba($color: #fff, $alpha: 0.4);
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-} // END OF MAIN STYLES
 
 // STYLES FOR CONTAINER-1 CONTENT
 .container-1-content {
