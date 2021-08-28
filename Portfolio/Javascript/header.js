@@ -30,7 +30,7 @@ function addCloseMenuEvent(idOrClass) {
 
     document.querySelector(idOrClass).addEventListener('click', () => {
 
-        gsap.to('.menu', {y: "-100%", duration: .3, ease: "expo.out"});
+        gsap.to('.menu', {y: "-200%", duration: .3, ease: "expo.out"});
     })
 }
 
